@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "51121a41-99a5-416b-801c-16c2738a1512",
+		"name": "collection batch 7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8407682"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJMdWlnaTczNjQ0IiwiaWF0IjoxNjkwNzAzNzM0LCJleHAiOjE2OTA3MDM3NjR9.xPKv7ZzRgyZj3W8BUvQ7gy5MCoYs5EGMGIKoUnyrhDs"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://10.14.226.226:3003/api/products/"
+					},
+					"response": []
+				},
+				{
+					"name": "Product By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJMdWlnaTczNjQ0IiwiaWF0IjoxNjkwNzAzODQ0LCJleHAiOjE2OTA3MDc0NDR9.hN2sQvSMc6W4NT-tjjk_AUp8rVdg3FxWng9onOTnZSw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://10.14.226.226:3003/api/products/:productId",
+							"protocol": "http",
+							"host": [
+								"10",
+								"14",
+								"226",
+								"226"
+							],
+							"port": "3003",
+							"path": [
+								"api",
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_depan\": \"Zul\",\n    \"nama_belakang\": \"Zidan\",\n    \"username\": \"zidan100\",\n    \"email\": \"zidan@gmail.com\",\n    \"password\": \"zidan100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3003/api/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"zidan100\",\n    \"password\": \"zidan100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3003/api/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ6aWRhbjEwMCIsImlhdCI6MTY5MTIzNTk4MiwiZXhwIjoxNjkxMjM5NTgyfQ.rh5mpObIgff4a0DGzlT1zuh77RzwJ_KIF3JXsen67Dw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"1\",\n    \"title\": \"testing2\",\n    \"body\": \"coba coba testing saja ini mah\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3003/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJMdWlnaTczNjQ0IiwiaWF0IjoxNjkwOTc4OTQ2LCJleHAiOjE2OTA5ODI1NDZ9.XVAnI90U6tc6wWA9rm-0qMpBYpW2mkKYaqeeXALe41U"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_depan\": \"Luigi\",\n    \"nama_belakang\": \"Bros\",\n    \"username\": \"LuigiGakGanteng\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://10.14.226.226:3003/api/user/update"
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJMdWlnaTczNjQ0MyIsImlhdCI6MTY5MDk4MzQyOCwiZXhwIjoxNjkwOTg3MDI4fQ.aHD5zNZ7JPfPPEknf7-40jrOyyDKRIC7VhohwQztd7Q"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"Ilovecoin2$\",\n    \"new_password\": \"Ilovecoin2$1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://10.14.226.226:3003/api/user/changepassword"
+					},
+					"response": []
+				},
+				{
+					"name": "upload foto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJMdWlnaTczNjQ0MyIsImlhdCI6MTY5MDk4Mjg2MCwiZXhwIjoxNjkwOTg2NDYwfQ.sdCUgu7La79LU8ms5K0h978KWxXbJbbGb-LVkk75UlY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilepic",
+									"type": "file",
+									"src": "/home/admine/Pictures/Screenshot from 2023-08-02 11-22-16.png"
+								}
+							]
+						},
+						"url": "http://10.14.226.226:3003/api/user/uploadfoto"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJMdWlnaTczNjQ0IiwiaWF0IjoxNjkwOTc4OTQ2LCJleHAiOjE2OTA5ODI1NDZ9.XVAnI90U6tc6wWA9rm-0qMpBYpW2mkKYaqeeXALe41U"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://10.14.226.226:3003/api/user/delete"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
